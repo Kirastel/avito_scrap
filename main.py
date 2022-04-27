@@ -1,12 +1,14 @@
 import time
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import sqlite3
-import pandas as pd
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+import sqlite3
+import pandas as pd
+
+
 
 
 def get_euro():
