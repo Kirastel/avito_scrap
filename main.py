@@ -9,8 +9,6 @@ import sqlite3
 import pandas as pd
 
 
-
-
 def get_euro():
     url = 'https://www.cbr.ru/'
     response = requests.get(url)
@@ -21,9 +19,6 @@ def get_euro():
     return number
 
 
-
-
-
 options = webdriver.ChromeOptions()
 
 # dusable web driver
@@ -31,7 +26,6 @@ options.add_argument("--disable-blink-features=AutomationControlled")
 
 # headless mode
 options.add_argument("--headless")
-
 
 # driver = webdriver.Chrome(service=Service('C:\\Users\\Марк\\Desktop\\avito scrap\\chromedriver.exe'), options=options)
  driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
@@ -63,6 +57,7 @@ for item in items:
     try:
         item_id = page_html.find("span", {"data-marker": "item-view/item-id"}) \
             .text.strip()
+        
     except Exception as e:
         print(e)
         item_id = 'No data'
@@ -119,7 +114,6 @@ for item in items:
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
     print('Page processed.')
-
 
 print('Create date base')
 
