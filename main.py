@@ -27,7 +27,6 @@ options.add_argument("--disable-blink-features=AutomationControlled")
 # headless mode
 options.add_argument("--headless")
 
-# driver = webdriver.Chrome(service=Service('C:\\Users\\Марк\\Desktop\\avito scrap\\chromedriver.exe'), options=options)
  driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
