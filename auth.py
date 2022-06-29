@@ -2,19 +2,14 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+
 options = webdriver.ChromeOptions()
 
 # dusable web driver
 options.add_argument("--disable-blink-features=AutomationControlled")
 
-# driver = webdriver.Chrome(
-#     executable_path='C:\\Users\\Марк\\Desktop\\avito scrap\\chromedriver.exe',
-#     options=options
-# )
-driver = webdriver.Chrome(service=Service('C:\\Users\\Марк\\Desktop\\avito scrap\\chromedriver.exe'), options=options)
-
-
-# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+PATH_DRIVER = ''
+driver = webdriver.Chrome(service=Service(PATH_DRIVER), options=options)
 
 
 def autorisation(login=None, password=None):
